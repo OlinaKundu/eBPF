@@ -1,0 +1,15 @@
+#compiled binaries and eBPF objects
+*.o
+problem1/configure-port
+#Editor temporary files
+*.swp
+*.swo
+*~
+
+#go build output
+
+problem1/problem1
+
+__pycache__/
+*.pyc
+
