@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+CG=/sys/fs/cgroup/myprocess
+if [ "$#" -lt 1 ]; then echo "Usage: sudo ./run-in-cgroup COMMAND[ARGS...]" >&2; exit 2; fi
+echo $$ > "$CG/cgroup.procs"
+exec "$@"
